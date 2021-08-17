@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const title = React.createElement('h1', null, 'Ahmad Hannan')
-const secondElement = React.createElement('p', null, 'My Paragraph')
+const title = React.createElement('div', null, );
 
 //? Rendering on DOM
 
-ReactDOM.render(
-    secondElement,
+ReactDOM.render(title,
+
     document.getElementById('root')
 );
