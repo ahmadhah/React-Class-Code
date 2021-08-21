@@ -1,25 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import List from './List.js';
+import ClassComponent from './classComponent'
 
 function App() {
+  console.log(List);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {List.map(item =>
+        <div >
+          <span>item : {+1} </span>
+          <span>
+            <a href={item.url}>{item.title}</a>
+          </span>
+          <span>{item.author}</span>
+          <span>{item.num_comments}</span>
+          <span>{item.points}</span>
+        </div>
+      )
+      
+      }
+<ClassComponent/>
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
