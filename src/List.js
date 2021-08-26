@@ -1,4 +1,4 @@
-const list = [
+export default [
     {
       title: 'React',
       url: 'https://facebook.github.io/react/',
@@ -17,4 +17,4 @@ const list = [
     },
   ];
 
-  export default list
+  
