@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import ClassComponent from './ClassComponent'
+
 
 function App() {
+  const name = "ahmad"
+  const email ="xyz@gmail.com"
+  const object = {name,email,showName}
+  const array = ["Lahore", "FSD" , "SKP", "Multan",{object}]
+  const showName = ()=>{
+    alert(name)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ClassComponent arr={array} />
     </div>
   );
 }
