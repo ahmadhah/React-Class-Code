@@ -10,7 +10,8 @@
 
 # production
 /build
-
+/ClassComponent.js
+ClassComponent.js
 # misc
 .DS_Store
 .env.local
