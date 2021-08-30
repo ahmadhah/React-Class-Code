@@ -2,16 +2,16 @@ import './App.css';
 import State from './State'
 function App() {
 
-  let a = 4444;
+  // let a = 4444;
 
-  function Ca() {
-    a = 999;
-    console.log('value inside the body of fucntion', a);
-  }
+  // function Ca() {
+  //   a = 999;
+  //   console.log('value inside the body of fucntion', a);
+  // }
 
-  function abc() {
-    console.log('Value outside the body of fucntion', a);
-  }
+  // function abc() {
+  //   console.log('Value outside the body of fucntion', a);
+  // }
 
   return (
     <div className="App">
