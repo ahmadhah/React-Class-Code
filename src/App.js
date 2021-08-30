@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
-
+import State from './State'
 function App() {
+
+  let a = 4444;
+
+  function Ca() {
+    a = 999;
+    console.log('value inside the body of fucntion', a);
+  }
+
+  function abc() {
+    console.log('Value outside the body of fucntion', a);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <h1>{a}</h1>
+      <button onClick={Ca}>BTN-1</button>
+      <button onClick={abc}>BTN-2</button> */}
+      <State/>
     </div>
   );
 }
 
+
 export default App;
+
+
