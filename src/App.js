@@ -1,4 +1,4 @@
-import './App.css';
+import style from './App.module.css';
 import React, { useState } from 'react'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>This is {name}</h1>
+      <h1 className={style.header}>This is {name}</h1>
       <ChildComponent name={name} changeName={changeName} />
     </div>
   );
