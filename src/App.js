@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from 'react'
+import Form from './Form'
 function App() {
+
+  const [item, setitem] = useState('');
+  const [list, setlist] = useState([]);
+
+  const onClickHandler = () => {
+
+    setlist([{ id: list.length, task: item }, ...list]);
+    setitem('')
+  }
+
+  const deleteItem = (id) => {
+    console.log(list.length)
+
+    setlist(list.filter(item => item.id !== id))
+  }
+  const show = () => { console.log(list) }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ textAlign: 'center', backgroundColor: "green", padding: "100px" }}>
+      <h1>Todo App</h1>
+      <input value={item} onChange={(e) => setitem(e.target.value)} placeholder="Enter any Text" />
+      <button onClick={onClickHandler}>+</button><button onClick={show}>show</button>
+      {list.map((listItem, i) => <h4 key={i}>{listItem.task} <button onClick={() => deleteItem(i)}>del</button><button onClick={show}>show</button></h4>)}
+
+
+      {/* <Form /> */}
     </div>
   );
 }
